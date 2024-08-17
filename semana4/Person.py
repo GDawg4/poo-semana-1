@@ -1,4 +1,3 @@
-# rgarozde@upana.edu.gt
 class Persona:
     def __init__(self, nombre, apellido, anio_de_nacimiento, carro=None):
         self.__nombre = nombre
