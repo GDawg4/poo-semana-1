@@ -31,7 +31,7 @@ class Carro:
             print(f"Excede el l_mite")
 
     # Métodos
-    def avanzar(self, kilometros=10):
+    def avanzar(self, kilometros=10.0):
         # Km que queremos avanzar
         # Ver cu_nta gasolina tenemos
         # Ver cu_nta gasolina gastar_amos
