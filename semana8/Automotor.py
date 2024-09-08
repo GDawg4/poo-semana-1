@@ -1,13 +1,11 @@
+from abc import ABC, abstractmethod
+from Vehiculo import Vehiculo
 
-
-class Automotor:
+class Automotor(Vehiculo):
     def __init__(self, color, numero_serie, marca, modelo, anio):
-        self.__color = color
+        super().__init__(color, marca, anio)
         self.__numero_serie = numero_serie
-        self.__marca = marca
         self.__modelo = modelo
-        self.__anio = anio
-        self.__kilometraje = 0
         # Flotante
         self.__gasolina = 0
         self.__gasolina_max = 12
@@ -49,19 +47,3 @@ class Automotor:
         else:
             self.__kilometraje += kilometros
             self.__gasolina = 0
-
-    def cambiar_color(self, color):
-        # if color == 'rojo':
-        #     self.__color = color
-        # elif color == 'blanco':
-        #     self.__color = color
-        # elif color == 'negro':
-        #     self.__color = color
-        # else:
-        #     print('No se puede')
-
-        if color in ["rojo", "blanco", "negro"]:
-            self.__color = color
-            print(f"Color cambiado a {color}")
-        else:
-            print("No se puede")
